@@ -27,7 +27,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y4H-oO-feo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Y4H-oO-feo">
                                         <rect key="frame" x="0.0" y="61.5" width="343" height="294"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g1I-iD-GxW">
@@ -56,6 +56,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="DJS-bB-LYQ" firstAttribute="centerY" secondItem="g1I-iD-GxW" secondAttribute="centerY" id="9HE-Te-P8w"/>
+                                            <constraint firstItem="iad-lq-cGM" firstAttribute="top" secondItem="g1I-iD-GxW" secondAttribute="top" id="Pg8-Rk-Wiw"/>
+                                            <constraint firstAttribute="bottom" secondItem="iad-lq-cGM" secondAttribute="bottom" id="q3t-cN-DwG"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-uh-sWa">
@@ -114,6 +116,10 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="ytQ-31-Emf" firstAttribute="top" secondItem="jXe-uh-sWa" secondAttribute="top" id="Ahv-96-V9D"/>
+                                            <constraint firstAttribute="bottom" secondItem="ytQ-31-Emf" secondAttribute="bottom" id="PsJ-gN-Uzu"/>
+                                            <constraint firstAttribute="bottom" secondItem="qgt-g4-sSM" secondAttribute="bottom" id="ZIf-0R-WsV"/>
+                                            <constraint firstItem="qgt-g4-sSM" firstAttribute="top" secondItem="jXe-uh-sWa" secondAttribute="top" id="Zsn-Ds-S9A"/>
                                             <constraint firstItem="n02-85-u3e" firstAttribute="top" secondItem="jXe-uh-sWa" secondAttribute="top" id="elF-oz-kMu"/>
                                             <constraint firstItem="ytQ-31-Emf" firstAttribute="width" secondItem="qgt-g4-sSM" secondAttribute="width" id="rcG-7u-WqK"/>
                                         </constraints>
@@ -125,6 +131,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="g1I-iD-GxW" firstAttribute="top" secondItem="Y4H-oO-feo" secondAttribute="bottom" constant="30" id="1Xb-Rk-cs0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ibl-9f-CsU" secondAttribute="bottom" id="2al-b0-RHR"/>
+                                    <constraint firstItem="Y4H-oO-feo" firstAttribute="top" secondItem="XLm-er-Y50" secondAttribute="bottom" constant="30" id="aqb-L2-lgf"/>
+                                    <constraint firstItem="jXe-uh-sWa" firstAttribute="top" secondItem="g1I-iD-GxW" secondAttribute="bottom" constant="30" id="bjL-6c-czu"/>
+                                    <constraint firstItem="Ibl-9f-CsU" firstAttribute="top" secondItem="jXe-uh-sWa" secondAttribute="bottom" constant="30" id="zIF-RS-EEE"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.97488446299999998" colorSpace="custom" customColorSpace="displayP3"/>

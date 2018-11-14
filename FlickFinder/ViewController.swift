@@ -133,9 +133,90 @@ extension ViewController {
     }
     
     private func displayImageFromFlickrBySearch(parameters: [String:AnyObject]) {
-        print(flickrUrlFromParameters(parameters: parameters))
-        enableUI(enabled: true)
-        photoLabel.text = "DONE!"
+        // create request
+        let request = URLRequest(url: flickrUrlFromParameters(parameters: parameters))
+        
+        // create task
+        let task = URLSession.shared.dataTask(with: request) {
+            (data, response, error) in
+
+            // if an error occurs, print it and re-enable the UI
+            func displayError(_ error: String) {
+                print(error)
+                DispatchQueue.main.async {
+                    self.photoLabel.text = error
+                    self.enableUI(enabled: true)
+                }
+            }
+            
+            // guard if there is an error in request
+            guard(error == nil) else {
+                displayError("There was an error with your request: \(error!)")
+                return
+            }
+            
+            // guard for successful http response
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
+                displayError("Your request returned a status code other than 2xx!")
+                return
+            }
+            
+            // guard if any data is returned or not
+            guard let data = data else {
+                displayError("No data was returned by the API")
+                return
+            }
+            
+            // parse the result
+            let parsedResult: [String: AnyObject]!
+            
+            do {
+                parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: AnyObject]
+            } catch {
+                displayError("Could not parse the data as JSON: '\(data)'")
+                return
+            }
+            
+            // guard if photos and photo key is present in the response or not
+            guard let photosDictionary = parsedResult?[Constants.FlickrResponseKeys.Photos] as? [String:AnyObject], let photoArray = photosDictionary[Constants.FlickrResponseKeys.Photo] as? [[String:AnyObject]] else {
+                displayError("Cannot find Keys : \(Constants.FlickrResponseKeys.Photos) and \([Constants.FlickrResponseKeys.Photo]) in \(parsedResult!)")
+                return
+            }
+            
+            guard(photoArray.count > 0) else {
+                displayError("No photos Found!.Search again")
+                return
+            }
+            
+            // get the random photo
+            let randomPhotoIndex = Int(arc4random_uniform(UInt32(photoArray.count)))
+            let photoDictionary = photoArray[randomPhotoIndex] as [String:AnyObject]
+            
+            
+            // guard  if image url and title exist or not
+            guard let imageUrlString = photoDictionary[Constants.FlickrResponseKeys.ImageUrl] as? String, let photoTitle = photoDictionary[Constants.FlickrResponseKeys.Title] as? String  else {
+                displayError("Cannot find Keys : \(Constants.FlickrResponseKeys.ImageUrl) and \([Constants.FlickrResponseKeys.Title]) in \(photoDictionary)")
+                return
+            }
+            
+            // create image url
+            let imageUrl = URL(string: imageUrlString)
+            
+            // get the image data
+            if let imageData = try? Data(contentsOf: imageUrl!){
+                DispatchQueue.main.async {
+                    // update the ui
+                    self.photoImageView.image = UIImage(data: imageData)
+                    self.photoLabel.text = photoTitle
+                    self.enableUI(enabled: true)
+                }
+            } else {
+                displayError("Image does not exist at \(imageUrl!)")
+            }
+        }
+
+        // start the task
+        task.resume()
     }
     
     //MARK: Create url from parameters
