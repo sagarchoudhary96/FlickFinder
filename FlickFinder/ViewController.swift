@@ -256,9 +256,7 @@ extension ViewController {
                 displayError("Cannot find Keys : \(Constants.FlickrResponseKeys.Photos) and \([Constants.FlickrResponseKeys.Photo]) in \(parsedResult!)")
                 return
             }
-            
-            let page = photosDictionary[Constants.FlickrParameterKeys.page] as! Int
-            print(page)
+
             guard(photoArray.count > 0) else {
                 displayError("No photos Found!.Search again")
                 return
