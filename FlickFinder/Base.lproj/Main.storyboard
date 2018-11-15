@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pUd-8V-bwn">
-                                <rect key="frame" x="16" y="36" width="343" height="595"/>
+                                <rect key="frame" x="16" y="36" width="382" height="664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flick Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLm-er-Y50">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="31.333333333333332"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Y4H-oO-feo">
-                                        <rect key="frame" x="0.0" y="61.5" width="343" height="294"/>
+                                        <rect key="frame" x="0.0" y="61.333333333333343" width="382" height="363.66666666666663"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g1I-iD-GxW">
-                                        <rect key="frame" x="0.0" y="385.5" width="343" height="36"/>
+                                        <rect key="frame" x="0.0" y="455" width="382" height="36"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iad-lq-cGM" userLabel="TextSearchField">
-                                                <rect key="frame" x="0.0" y="0.0" width="301" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="kzs-5f-mdi"/>
                                                 </constraints>
@@ -43,7 +43,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJS-bB-LYQ" userLabel="TextSearchButton">
-                                                <rect key="frame" x="317" y="5" width="26" height="26"/>
+                                                <rect key="frame" x="356" y="5" width="26" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="bZr-pD-Lly"/>
                                                     <constraint firstAttribute="width" constant="26" id="nae-Gh-wL5"/>
@@ -61,13 +61,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-uh-sWa">
-                                        <rect key="frame" x="0.0" y="451.5" width="343" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="521" width="382" height="72.333333333333371"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ytQ-31-Emf">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="72.333333333333329"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVR-x5-XtK" userLabel="LatitudeField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="rbg-G4-R2R"/>
                                                         </constraints>
@@ -76,7 +76,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv9-4Z-Ipz">
-                                                        <rect key="frame" x="0.0" y="52" width="142.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="52" width="162" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -84,10 +84,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qgt-g4-sSM">
-                                                <rect key="frame" x="158.5" y="0.0" width="142.5" height="72.5"/>
+                                                <rect key="frame" x="178" y="0.0" width="162" height="72.333333333333329"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e44-VH-HTP" userLabel="LongitudeField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="SUI-Bs-DcE"/>
                                                         </constraints>
@@ -96,7 +96,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-UC-mUw">
-                                                        <rect key="frame" x="0.0" y="52" width="142.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="52" width="162" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n02-85-u3e" userLabel="LocationSearchButton">
-                                                <rect key="frame" x="317" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="356" y="0.0" width="26" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="mC7-OR-rdc"/>
                                                     <constraint firstAttribute="width" constant="26" id="q0w-dV-AB2"/>
@@ -125,7 +125,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by typing in name/ coordinates of the place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibl-9f-CsU" userLabel="InfoLabel">
-                                        <rect key="frame" x="0.0" y="554" width="343" height="41"/>
+                                        <rect key="frame" x="0.0" y="623.33333333333337" width="382" height="40.666666666666629"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

@@ -28,6 +28,7 @@ struct Constants {
         static let Text = "text"
         static let BoundingBox = "bbox"
         static let page = "page"
+        static let pages = "pages"
     }
     struct FlickrParameterValues {
         static let PhotosSearchMethod = "flickr.photos.search"
